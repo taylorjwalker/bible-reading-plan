@@ -1,1 +1,1 @@
-/day/:dayNumber  / day=:dayNumber  200
+/day/*  /  200
