@@ -1,1 +1,1 @@
-/day/:dayNumber  / day=:dayNumber  301
+/day/* / day=:splat 200
