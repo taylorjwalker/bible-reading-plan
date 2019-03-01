@@ -2,11 +2,7 @@ let startDay = moment("2019-02-28");
 let today = moment();
 let day = today.diff(startDay, "days") + 1;
 
-const getDayNumberFromUrl = () => {
-  return window.location.href.match(new RegExp("/day/(.*)"))[1];
-};
-
-let dayNumber = getDayNumberFromUrl() || day;
+let dayNumber = window.location.href.match(new RegExp("/day/(.*)"))[1] || day;
 
 let scripture = [];
 
