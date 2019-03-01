@@ -16,12 +16,8 @@ if (!isNaN(dayNumber) && +dayNumber > 0) {
     scripture.push(list[(dayNumber - 1) % list.length]);
   });
 
-  substring = "";
-  scripture.forEach(chapter => {
-    substring += chapter + ", ";
-  });
-
-  let url = `https://www.biblegateway.com/passage/?search=${substring}&version=CSB`;
+  const passageListString = scripture.join(", ").replace(/ /g, "+");
+  const url = `https://www.biblegateway.com/passage/?search=${passageListString}&version=CSB`;
 
   console.log(scripture);
   console.log(url);
